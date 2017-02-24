@@ -17,9 +17,7 @@ class Room():
         global node
         node = globals()[getattr(self, direction)]
     #def loot_item(self, item):
-    #    if item != None:
-    #        print item
-    #        items.append(item)        
+        
 ffg = Room('Fresno Fair Gate','You are at the entrance of the Fresno Fair.','log',None,None,None,None,None,None,None, 'Tickets')
 
 log = Room('White Water Lodge Flume','There is a line of logs with two seats, floating on clear water.','ex','ffg','fb','ws',None,None,None,None)
@@ -112,6 +110,7 @@ while is_alive:
         sys.exit(0)
     if inp in short_directions:
         inp = directions[short_directions.index(inp)]
+        
     try:
         node.move(inp)
     except: 
